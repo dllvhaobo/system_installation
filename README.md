@@ -27,7 +27,7 @@ chsh -s /usr/bin/zsh
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update; sudo apt-get install ca-certificates curl gnupg lsb-release
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update;sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -35,6 +35,7 @@ sudo usermod -aG docker $USER
 ```
 
 ## NVIM
+
 ```bash
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -46,6 +47,7 @@ sudo apt install neovim powerline fonts-powerline yarn  vim-airline zsh-theme-po
 
 sudo gem install neovim
 sudo npm install -g neovim
+sudo npm install -g  bash-language-server
 pip3 install pynvim
 pip3 install pygments
                                                                                                                                                                                   
